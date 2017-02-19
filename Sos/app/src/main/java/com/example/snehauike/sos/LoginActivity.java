@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         signIn = (Button) findViewById(R.id.btLogin);
         signUp = (Button) findViewById(R.id.btRegister);
 
-       final StringBuffer password = myDb.encrypt(passowrd.getText().toString());
+        final StringBuffer password = myDb.encrypt(passowrd.getText().toString());
 
 
         signIn.setOnClickListener(
@@ -34,9 +34,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         String storedPassword = myDb.getSingleEntry(username.getText().toString());
-
                         //if ((passowrd.getText().toString()).equals(storedPassword)) {
-                        if ((password.toString()).equals(storedPassword)){
+                        if ((password.toString()).equals(storedPassword)) {
                             Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_LONG).show();
                             Intent locationIntent = new Intent(LoginActivity.this, MapsActivity.class);
                             //Intent locationIntent = new Intent(LoginActivity.this, WhereAmIActivity.class);

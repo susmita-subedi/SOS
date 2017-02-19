@@ -60,12 +60,18 @@ public class RegisterActivity extends AppCompatActivity {
                         if (!(password1.toString().equals(password2.toString()))){
                             confirmPassword.setError("Passswords do not match");
                         }
+                        if((myDb.isDataAlreadyPresent(myDb.COL_5,username.getText().toString()))){
+                            username.requestFocus();
+                            username.setError("Username already taken");
+                        }
 
 
                         //insert data
                         if (name.length() != 0 && isValidEmail(emailId.getText().toString())
                                 && isValidNumber(phoneNo.getText().toString())
-                                && (password1.toString().equals(password2.toString()))) {
+                                && (password1.toString().equals(password2.toString()))
+                                && (!(myDb.isDataAlreadyPresent(myDb.COL_5,username.getText().toString()))))
+                        {
                             boolean isInserted = myDb.insertData(name.getText().toString(),
                                     phoneNo.getText().toString(),
                                     emailId.getText().toString(),
@@ -104,6 +110,8 @@ public class RegisterActivity extends AppCompatActivity {
         Matcher matcher = pattern.matcher(phone);
         return matcher.matches();
     }
+
+
 
 
 }
