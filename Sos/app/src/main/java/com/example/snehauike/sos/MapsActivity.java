@@ -68,14 +68,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
                     MY_PERMISSIONS_REQUEST_LOCATION);
 
-        }
-        else {
+        } else {
 
-           buildGoogleApiClient();
+            buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
         }
 
     }
+
     protected synchronized void buildGoogleApiClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -95,9 +95,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 android.Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
-            mCurrentLocation= LocationServices
+            mCurrentLocation = LocationServices
                     .FusedLocationApi
-                    .getLastLocation( mGoogleApiClient );
+                    .getLastLocation(mGoogleApiClient);
         }
 
     }
@@ -139,7 +139,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
-    public boolean checkLocationPermission(){
+
+    public boolean checkLocationPermission() {
         if (ContextCompat.checkSelfPermission(this,
                 android.Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {

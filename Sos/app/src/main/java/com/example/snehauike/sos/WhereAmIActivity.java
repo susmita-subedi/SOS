@@ -24,7 +24,7 @@ public class WhereAmIActivity extends AppCompatActivity {
 
     @Override
 
-    protected  void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wher_am_i);
 
@@ -37,13 +37,13 @@ public class WhereAmIActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         gps = new TrackGPS(WhereAmIActivity.this);
-                        final String address,city,state,country,postalCode,knownName;
+                        final String address, city, state, country, postalCode, knownName;
 
-                        if(gps.canGetLocation()){
+                        if (gps.canGetLocation()) {
                             longitude = gps.getLongitude();
                             latitude = gps.getLatitude();
                             try {
-                                adresses = geocoder.getFromLocation(latitude,longitude,1);
+                                adresses = geocoder.getFromLocation(latitude, longitude, 1);
                                 address = adresses.get(0).getAddressLine(0);
                                 city = adresses.get(0).getLocality();
                                 state = adresses.get(0).getAdminArea();
@@ -51,25 +51,24 @@ public class WhereAmIActivity extends AppCompatActivity {
                                 postalCode = adresses.get(0).getPostalCode();
                                 knownName = adresses.get(0).getFeatureName();
 
-                                tvLocation.setText("Address:"+address+"\nCity:"+city+"\nState:"+state+"\nCountry:"+country+"\nCode:"+postalCode);
+                                tvLocation.setText("Address:" + address + "\nCity:" + city + "\nState:" + state + "\nCountry:" + country + "\nCode:" + postalCode);
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
 
 
+                            Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(longitude) + "\nLatitude:" + Double.toString(latitude), Toast.LENGTH_LONG).show();
 
-
-                            Toast.makeText(getApplicationContext(),"Longitude:" +Double.toString(longitude)+"\nLatitude:" +Double.toString(latitude), Toast.LENGTH_LONG).show();
-
-                        }else{
+                        } else {
                             gps.showSettingsAlert();
                         }
                     }
                 }
         );
     }
+
     @Override
-    protected void onDestroy(){
+    protected void onDestroy() {
         super.onDestroy();
         gps.stopUsingGPS();
     }
