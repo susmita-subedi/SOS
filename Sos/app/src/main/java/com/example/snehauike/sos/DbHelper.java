@@ -119,6 +119,18 @@ public class DbHelper extends SQLiteOpenHelper {
         return hexString;
     }
 
+    public boolean isDataAlreadyPresent(String dbField, String fieldValue) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor result = db.rawQuery("Select * from " + TABLE_NAME + " where " + dbField + "='"+ fieldValue+"'", null);
+        if (result.moveToFirst()) {
+            result.close();
+            return true;
+        } else {
+            result.close();
+            return false;
+        }
+    }
+
 
 
 }

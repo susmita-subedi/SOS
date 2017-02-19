@@ -34,7 +34,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         String storedPassword = myDb.getSingleEntry(username.getText().toString());
-
+                        System.out.println("Stored:"+ storedPassword);
+                        System.out.println("Entered: "+ password);
                         //if ((passowrd.getText().toString()).equals(storedPassword)) {
                         if ((password.toString()).equals(storedPassword)){
                             Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_LONG).show();
