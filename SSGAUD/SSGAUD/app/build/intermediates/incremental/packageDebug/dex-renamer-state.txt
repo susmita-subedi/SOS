@@ -1,0 +1,7 @@
+#Mon Apr 17 11:27:44 PDT 2017
+base.0=/Users/snehauike/AndroidStudioProjects/SSGAUD/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_3383118ef590aabf224f18dfa4747a01950ba348
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/snehauike/AndroidStudioProjects/SSGAUD/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_ef2ad7b88ef1b5ecf818ca50a515a3f7182813a8/classes.dex
+base.1=/Users/snehauike/AndroidStudioProjects/SSGAUD/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_ef2ad7b88ef1b5ecf818ca50a515a3f7182813a8
+file.0=/Users/snehauike/AndroidStudioProjects/SSGAUD/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_3383118ef590aabf224f18dfa4747a01950ba348/classes.dex

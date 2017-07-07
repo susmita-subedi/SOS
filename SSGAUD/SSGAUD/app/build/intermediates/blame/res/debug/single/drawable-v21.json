@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/snehauike/AndroidStudioProjects/SSGAUD/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/snehauike/.android/build-cache/b1ed05d7f34806a4bbf0ac9565c004bdc5c2bd26/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/snehauike/AndroidStudioProjects/SSGAUD/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/snehauike/.android/build-cache/b1ed05d7f34806a4bbf0ac9565c004bdc5c2bd26/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/snehauike/AndroidStudioProjects/SSGAUD/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/snehauike/.android/build-cache/b1ed05d7f34806a4bbf0ac9565c004bdc5c2bd26/output/res/drawable-v21/abc_edit_text_material.xml"
+    }
+]
